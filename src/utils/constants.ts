@@ -1,0 +1,1 @@
+export const ERROR_API = "Erro ao obter os dados da API.";
