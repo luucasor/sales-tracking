@@ -3,9 +3,9 @@ import ApiSalesTracking from "@/utils/ApiSalesTracking";
 import User from '@/@types/User';
 import { ERROR_API } from '@/utils/constants'
 
-const getUsers = async (): Promise<User> => {
+const getUsers = async (email: string): Promise<User[]> => {
     try {
-        return ApiSalesTracking.post(Entities.USERS);
+        return ApiSalesTracking.post(Entities.USERS, email);
     } catch (error) {
         throw new Error(`${ERROR_API}: ${error}`);
     }
